@@ -43,19 +43,19 @@ void HighwayPatrol::pullOver( Vehicle* v, bool willArrest, Highway* h )
     {
         if (dynamic_cast<Car*>(v))
         {
-            flagged = "car";
+            flagged = "CAR";
         }
-        if (dynamic_cast<Motorcycle*>(v))
+        else if (dynamic_cast<Motorcycle*>(v))
         {
-            flagged = "motorcycle";
+            flagged = "MOTORCYCLE";
         }
-        if (dynamic_cast<SemiTruck*>(v))
+        else if (dynamic_cast<SemiTruck*>(v))
         {
-            flagged = "semitruck";
+            flagged = "SEMITRUCK";
         }
         else
         {
-            flagged = "ILLEGAL VEHICLE";
+            flagged = "illegal vehicle";
         }
         //print the vehicle type in this std::cout between "THE [" and "] PULL". 
         std::cout << name << ": YOU IN THE [ " << flagged << " ] PULL OVER AND SHOW YOUR HANDS" << std::endl;
